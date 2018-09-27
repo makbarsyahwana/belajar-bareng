@@ -1,15 +1,19 @@
 const express = require('express')
-
+const bodyParser = require('body-parser')
 const app = express()
 
-const hello = require('./hello')
-
-app.use('/', function (req, res) {
+/**app.use('/', function (req, res) {
    res.send('Hello World')
-})
+})**/
 
-app.use('/hello', hello)
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.set('view engine', 'hbs')
+var router = express.Router()
+
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+});
+app.use('/api', router)
   
 app.listen(3000, () => console.log("Its Running on port 3000"))
