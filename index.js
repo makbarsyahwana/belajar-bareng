@@ -4,9 +4,9 @@ const app = express()
 
 const hello = require('./hello')
 
-//app.use('/', function (req, res) {
-//    res.send('Hello World')
-//})
+app.use('/', function (req, res) {
+   res.send('Hello World')
+})
 
 app.use('/hello', hello)
 
