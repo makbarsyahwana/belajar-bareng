@@ -1,0 +1,15 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "makbasyahwna",
+  "license": "MIT License",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
