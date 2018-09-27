@@ -2,9 +2,13 @@ const express = require('express')
 
 const app = express()
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
-})
+const hello = require('./hello')
+
+//app.use('/', function (req, res) {
+//    res.send('Hello World')
+//})
+
+app.use('/hello', hello)
 
 app.set('view engine', 'hbs')
   
